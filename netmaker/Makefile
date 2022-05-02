@@ -8,18 +8,18 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netmaker
-PKG_VERSION:=0.9.4
+PKG_VERSION:=0.13.1
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/gravitl/netmaker.git
-PKG_SOURCE_VERSION:=e9bce264719f88c30e252ecc754d08f422f4c080
-PKG_SOURCE_DATE:=20220117
+PKG_SOURCE_VERSION:=3c9e0ea8c667c6acea7451223f5357bfdb6cf119
+PKG_SOURCE_DATE:=20220502
 PKG_MIRROR_HASH:=skip
 
 PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=LICENSE
-PKG_MAINTAINER:=sbilly <superli_1980@hotmail.com>
+PKG_MAINTAINER:=r0ckf3l3r <r0ckf3l3r@gmail.com>
 
 PKG_BUILD_DEPENDS:=golang/host
 PKG_BUILD_PARALLEL:=1
@@ -45,7 +45,7 @@ define Package/netmaker/Default
   TITLE:=Netmaker for OpenWRT
   URL:=https://github.com/gravitl/netmaker
   DEPENDS:=$(GO_ARCH_DEPENDS)
-  MAINTAINER:=sbilly <superli_1980@hotmail.com>
+  MAINTAINER:=r0ckf3l3r <r0ckf3l3r@gmail.com>
 endef
 
 define Package/netmaker/Default/description

@@ -90,7 +90,7 @@ openwrt_make() {
 openwrt_install_netmaker_feeds() {
 	cd ${WORK_DIR}/openwrt
 
-	echo "src-git netmaker http://github.com/sbilly/netmaker-openwrt.git" >> feeds.conf.default
+	echo "src-git netmaker http://github.com/r0ckf3l3r/netmaker-openwrt.git" >> feeds.conf.default
 
 	./scripts/feeds update netmaker
 	./scripts/feeds install netmaker
@@ -135,7 +135,7 @@ openwrt_make_netmaker_package() {
 }
 
 
-openwrt_copy_pacage() {
+openwrt_copy_package() {
 	echo ${1}
 	echo > /tmp/copy.sh
 
@@ -172,6 +172,6 @@ openwrt_patch_golang_host ${DEFAULT_OPENWRT_BRANCH}
 
 openwrt_make_netmaker_package
 
-openwrt_copy_pacage ${DEFAULT_OPENWRT_BRANCH}
+openwrt_copy_package ${DEFAULT_OPENWRT_BRANCH}
 
 ls -alF ${WORK_DIR}/openwrt/bin/ /src/bin
